@@ -1,0 +1,7 @@
+2015-08-19 13:19:22,178 | 线程:[10] | 级别:ERROR | 对象:FastDFS.Client.Component.StorageClient | 信息: 上传文件发生异常！异常类型:System.Net.Sockets.SocketException,详细信息:System.IO.IOException: 无法将数据写入传输连接: 远程主机强迫关闭了一个现有的连接。。 ---> System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+   在 System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   在 System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   在 FastDFS.Client.Component.StorageClient.DoUpload(String groupName, String localFileName, Byte[] buffer, String extension, NameValuePair[] metadatas) 位置 E:\网站\MyProduct\FastDFS\FastDFS.Client\Component\StorageClient.cs:行号 123!
+2015-08-19 13:19:22,180 | 线程:[10] | 级别:FATAL | 对象:FastDFS.Client.Core.Pool.Support.ObjectPool`1 | 信息: 连接发生异常，将被丢弃，创建一个新连接放入连接池！
